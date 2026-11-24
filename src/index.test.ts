@@ -23,12 +23,20 @@ globalThis.fetch = async (input, init) => {
 const auth = betterAuth({
   secret: 'test-secret-that-is-long-enough-for-better-auth',
   baseURL: 'http://localhost:3000',
-  database: memoryAdapter({ user: [], session: [], account: [], verification: [] }),
+  database: memoryAdapter({
+    user: [],
+    session: [],
+    account: [],
+    verification: []
+  }),
   emailAndPassword: { enabled: true },
   plugins: [loginLlama({ apiKey: 'test-key' })]
 });
 
-const credentials = { email: 'ada@example.test', password: 'correct-horse-battery' };
+const credentials = {
+  email: 'ada@example.test',
+  password: 'correct-horse-battery'
+};
 await auth.api.signUpEmail({ body: { ...credentials, name: 'Ada' } });
 
 // Through the HTTP handler, so each test sees what a browser would.
