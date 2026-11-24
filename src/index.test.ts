@@ -109,3 +109,18 @@ test('tells LoginLlama which integration sent the check', async () => {
   await signIn();
   assert.equal(source, 'better-auth-loginllama');
 });
+
+test('lets a sign-in through just below the block threshold', async () => {
+  score = 7;
+  assert.equal((await signIn()).status, 200);
+});
+
+test('fails open when LoginLlama answers with an error', async () => {
+  const mocked = globalThis.fetch;
+  globalThis.fetch = async () => new Response('down', { status: 503 });
+  try {
+    assert.equal((await signIn()).status, 200);
+  } finally {
+    globalThis.fetch = mocked;
+  }
+});
