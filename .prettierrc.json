@@ -1,0 +1,7 @@
+{
+  "singleQuote": true,
+  "trailingComma": "none",
+  "overrides": [
+    { "files": "*.{yml,yaml}", "options": { "singleQuote": false } }
+  ]
+}
