@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/Loginllama/better-auth-loginllama/compare/better-auth-loginllama-v1.0.1...better-auth-loginllama-v1.0.2) (2026-11-25)
+
+
+### Other Changes
+
+* **deps:** Bump amannn/action-semantic-pull-request ([#9](https://github.com/Loginllama/better-auth-loginllama/issues/9)) ([8bc355a](https://github.com/Loginllama/better-auth-loginllama/commit/8bc355a9cf1833f289782bdfa463a70cde0e7ae4))
+
 ## [1.0.1](https://github.com/Loginllama/better-auth-loginllama/compare/better-auth-loginllama-v1.0.0...better-auth-loginllama-v1.0.1) (2026-11-17)
 
 
